@@ -1,0 +1,3 @@
+1) Create a component without spec.ts ng g c recipes --spec false
+2) Create a component inside another one: ng g c recipes\recipe-list --spec false
+3) Create a model which automatic properties: constructor(public name: string, public amount: number)
