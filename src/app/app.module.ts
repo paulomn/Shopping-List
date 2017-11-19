@@ -1,3 +1,5 @@
+import { AuthGuard } from './auth/auth-guard.service';
+import { AuthService } from './auth/auth.service';
 import { DataStorageService } from './shared/data-storage';
 
 import { NgModule } from '@angular/core';
@@ -19,6 +21,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { BlankRecipeComponent } from './recipes/blank-recipe/blank-recipe.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { HttpModule } from '@angular/http';
+import { SignupComponent } from './auth/signup/signup.component';
+import { SigninComponent } from './auth/signin/signin.component';
 
 AppRoutingModule
 
@@ -34,12 +38,14 @@ AppRoutingModule
     ShoppingEditComponent,
     DropdownDirective,
     BlankRecipeComponent,
-    RecipeEditComponent
+    RecipeEditComponent,
+    SignupComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule, AppRoutingModule, ReactiveFormsModule, FormsModule, HttpModule
   ],
-  providers: [ShoppingListService, RecipeService, DataStorageService],
+  providers: [ShoppingListService, RecipeService, DataStorageService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
