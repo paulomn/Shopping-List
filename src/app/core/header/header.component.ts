@@ -1,5 +1,5 @@
-import { AuthService } from './../auth/auth.service';
-import { DataStorageService } from './../shared/data-storage';
+import { AuthService } from '../../auth/auth.service';
+import { DataStorageService } from '../../shared/data-storage';
 import { Response } from '@angular/http';
 import { Component, EventEmitter, Output } from '@angular/core';
 
